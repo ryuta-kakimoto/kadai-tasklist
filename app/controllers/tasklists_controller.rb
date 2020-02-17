@@ -4,9 +4,11 @@ class TasklistsController < ApplicationController
   end
 
   def show
+    @tasklist = Tasklist.find(params[:id])
   end
 
   def new
+    @tasklist = Tasklist.new
   end
 
   def create
